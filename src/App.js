@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+//import { createContext } from "react";
+import "./App.css";
+import ContainerBox from "./Components/ContainerBox/ContainerBox";
+//export const TaskManagerContext = createContext();
+import {TaskProvider} from "./context/TaskContext";
 
 function App() {
+  //const name = "Clau";
+  //const array = [1, 2, 3];
+
   return (
+    //<TaskManagerContext.Provider value={{array, name}}>
+    <TaskProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContainerBox />
     </div>
+    </TaskProvider>
+    //</TaskManagerContext.Provider>
   );
 }
 
